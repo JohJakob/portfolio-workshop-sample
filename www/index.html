@@ -37,20 +37,12 @@
     <!-- BEGIN Main Section (Content) -->
 
     <main>
-      <a href="/project-1">
-        <img src="/images/project-1.png">
-        <h2>Project #1</h2>
-      </a>
-
-      <a href="/project-2">
-        <img src="/images/project-2.png">
-        <h2>Project #2</h2>
-      </a>
-
-      <a href="/project-3">
-        <img src="/images/project-3.png">
-        <h2>Project #3</h2>
-      </a>
+      {{#section projects multiple=true}}
+        <a href="{{_permalink}}">
+          {{cover type=image}}
+          <h2>{{title}}</h2>
+        </a>
+      {{/section}}
     </main>
 
     <!-- END Main Section -->
